@@ -2,16 +2,30 @@
   "name": "information-display",
   "version": "0.1.0",
   "private": true,
+  "main": "./App.js",
   "dependencies": {
+    "expo": "^32.0.6",
+    "expo-cli": "^2.11.2",
+    "g": "^2.0.1",
+    "prettier": "^1.16.4",
     "react": "^16.8.3",
+    "react-art": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-native": "^0.58.5",
+    "react-native-web": "^0.10.0",
     "react-scripts": "2.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "format": "prettier --write \"*src/**/*.js\"",
+    "test-web": "react-scripts test",
+    "eject-web": "react-scripts eject",
+    "start-native" : "expo start",
+    "android": "expo android",
+    "ios": "expo ios",
+    "build:ios": "expo build:ios",
+    "build:android": "expo build:android"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +35,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-preset-expo": "^5.0.0"
+  }
 }
