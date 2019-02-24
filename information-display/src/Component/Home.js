@@ -7,14 +7,31 @@ class Home extends Component {
     loading: true
   }
 
-  componentDidMount()
+  componentDidMount(){
+    this.getUsers();
+  }
+
+  async getUsers(){
+    const res = await fetch("https://randomuser.me/api/?results=20")
+    const { results } = await res.join();
+    this.setState({users: [...results], loading: false})
+  }
 
  render(){
 
     return (
-
-
-
+      <ScrollView
+        npSpacer={true}
+        noScroll={true}
+        style={styles.container}
+      >
+        <ActivityIndicator
+          style={[styles.centering, styles.gray]}
+          color="#ff8179"
+          size="large"
+        />
+      
+      </ScrollView>
 
     )
 
@@ -22,5 +39,16 @@ class Home extends Component {
 
 }
 
+var styles = StyleSheet.create({
+  container: {
+    backgroundColor: "whitesmoke"
+  },
+  centering: {
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 8,
+    height: '100vh'
+  }
+})
 
 export default Home
