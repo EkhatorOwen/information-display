@@ -1,29 +1,24 @@
-import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, View } from 'react-native'
+import React, { Component } from "react";
+import { AppRegistry, StyleSheet, View } from "react-native";
 
-import Home from './Component/Home'
+import Home from "./Home";
 
 class App extends Component {
-  render(){
-    return(
-      <view style={styles.appContainer}>
-      
-      <Home/>
-      
-      </view>
-    )
+  render() {
+    return (
+      <View style={styles.appContainer}>
+        <Home />
+      </View>
+    );
   }
-
 }
 
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1
   }
-})
+});
 
-AppRegistry.registerComponent('App',()=>App)
-
-
+AppRegistry.registerComponent("App", () => App);
 
 export default App;

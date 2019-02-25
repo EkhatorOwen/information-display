@@ -1,23 +1,19 @@
-import React, { Compoent } from 'react'
-import { View, Image, Text, StyleSheet } from 'react-native;'
+import React from "react";
+import { View, Image, Text, StyleSheet } from "react-native";
 
-const UserItem = ({ item: user }) =>{
-
+const UserItem = ({ item: user }) => {
   return (
-    <View style={styles.row}> 
+    <View style={styles.row}>
       <Image style={styles.rowIcon} source={user.picture.medium} />
       <View style={styles.rowData}>
-        <Text style={styles.rowDataText}>{`${user.name.title} ${user.name.first} ${user.name.last}`}</Text>
+        <Text style={styles.rowDataText}>{`${user.name.title} ${
+          user.name.first
+        } ${user.name.last}`}</Text>
         <Text style={styles.rowDataSubText}>{user.email}</Text>
       </View>
-    
     </View>
-
-
-  )
-
-
-}
+  );
+};
 
 const styles = StyleSheet.create({
   row: {
@@ -40,20 +36,17 @@ const styles = StyleSheet.create({
   rowData: {
     flex: 1
   },
-  rowData: {
-    flex: 1
-  },
   rowDataText: {
     fontSize: 15,
     textTransform: "capitalize",
     color: "#4b4b4b"
-  }, 
-    rowDataSubText: {
-      fontSize: 13,
-      opacity: 0.8,
-      color: "#a8a689",
-      marginTop: 4
-    }
-})
+  },
+  rowDataSubText: {
+    fontSize: 13,
+    opacity: 0.8,
+    color: "#a8a689",
+    marginTop: 4
+  }
+});
 
-export default UserItem
+export default UserItem;
