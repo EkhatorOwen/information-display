@@ -20,7 +20,7 @@ class Home extends Component {
 
   render() {
     return (
-      <ScrollView npSpacer={true} noScroll={true} style={styles.container}>
+      <ScrollView noSpacer={true} noScroll={true} style={styles.container}>
         {this.state.loading ? (
           <ActivityIndicator
             style={[styles.centering, styles.gray]}
