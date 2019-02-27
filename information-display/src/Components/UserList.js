@@ -1,7 +1,7 @@
 import React from "react";
 import { SwipeableFlatList } from "react-native";
 import UserItem from "./UserItem";
-import UserActions from './UserActions'
+import UserActions from "./UserActions";
 
 const UserList = ({ users }) => {
   return (
