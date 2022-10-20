@@ -4,7 +4,7 @@
   "private": true,
   "main": "./App.js",
   "dependencies": {
-    "expo": "^32.0.6",
+    "expo": "^46.0.16",
     "expo-cli": "^2.11.2",
     "g": "^2.0.1",
     "prettier": "^1.16.4",
